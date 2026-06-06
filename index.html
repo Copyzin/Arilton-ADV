@@ -42,11 +42,11 @@
   };
 </script>
 
-<link rel="stylesheet" href="assets/css/styles.css?v=16">
+<link rel="stylesheet" href="assets/css/styles.css?v=21">
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
-<script src="assets/js/main.js?v=7" defer></script>
+<script src="assets/js/main.js?v=8" defer></script>
 <script src="assets/js/ascii-hero.js?v=4" defer></script>
 </head>
 
@@ -111,14 +111,18 @@
     <span class="hero-ascii-hint" aria-hidden="true">mova o cursor</span>
   </section>
 
+  <div class="frame">
+
   <!-- ============ SOBRE ============ -->
-  <section id="sobre" class="section-pad border-t border-line">
-    <div class="wrap grid md:grid-cols-[0.82fr_1fr] gap-x-14 gap-y-10 items-center">
+  <section id="sobre" class="section-pad">
+    <div class="wrap grid md:grid-cols-[0.82fr_1px_1fr] gap-x-14 gap-y-10 items-center">
       <!-- TODO: trocar placeholder por retrato profissional real do Dr. Arilton -->
       <div data-anim="about-image" class="portrait-frame">
         <span class="material-symbols-outlined" aria-hidden="true">person</span>
         <span class="portrait-label">Retrato do Dr. Arilton<br><em>foto a confirmar</em></span>
       </div>
+
+      <div class="frame-divider hidden md:block self-stretch" aria-hidden="true"></div>
 
       <div data-anim="about-text">
         <p class="label-caps text-ink-3 mb-4">Sobre</p>
@@ -136,8 +140,8 @@
 
   <!-- ============ AREAS DE ATUACAO ============ -->
   <section id="areas" class="section-pad border-t border-line bg-surface-sunken">
-    <div class="wrap" data-corners>
-      <div class="max-w-[42rem] mb-12" data-anim="section-title">
+    <div class="wrap">
+      <div class="mb-12" data-anim="section-title">
         <p class="label-caps text-ink-3 mb-4">Áreas de atuação</p>
         <h2 class="section-title font-display text-ink">Do direito do trabalho ao cuidado com a sua família.</h2>
       </div>
@@ -183,8 +187,8 @@
 
   <!-- ============ COMO FUNCIONA ============ -->
   <section id="como" class="section-pad border-t border-line">
-    <div class="wrap" data-corners>
-      <div class="max-w-[42rem] mb-14" data-anim="section-title">
+    <div class="wrap">
+      <div class="mb-14" data-anim="section-title">
         <p class="label-caps text-ink-3 mb-4">Como funciona</p>
         <h2 class="section-title font-display text-ink">Simples, direto e 100% online.</h2>
         <p class="text-ink-2 mt-5 max-w-[48ch]">Você não precisa sair de casa nem enfrentar burocracia para começar. Em três passos a gente entende o seu caso e define o melhor caminho.</p>
@@ -212,12 +216,14 @@
 
   <!-- ============ FAQ ============ -->
   <section id="faq" class="section-pad border-t border-line bg-surface-sunken">
-    <div class="wrap grid md:grid-cols-[0.7fr_1fr] gap-x-14 gap-y-8" data-corners>
+    <div class="wrap grid md:grid-cols-[0.7fr_1px_1fr] gap-x-14 gap-y-8">
       <div data-anim="section-title">
         <p class="label-caps text-ink-3 mb-4">Dúvidas frequentes</p>
         <h2 class="section-title font-display text-ink">O que as pessoas mais perguntam.</h2>
         <p class="text-ink-2 mt-5 max-w-[34ch]">Respostas diretas para as situações trabalhistas mais comuns. Tem outra dúvida? Me chame no WhatsApp.</p>
       </div>
+
+      <div class="frame-divider hidden md:block self-stretch" aria-hidden="true"></div>
 
       <div class="faq-list" id="faqList">
         <details class="faq-item" data-anim="faq-item">
@@ -244,8 +250,10 @@
     </div>
   </section>
 
+  </div>
+
   <!-- ============ CTA FINAL ============ -->
-  <section class="cta-final bg-ink-section text-inverse">
+  <section class="cta-final bg-ink-section text-inverse border-t border-line">
     <div class="wrap section-pad text-center flex flex-col items-center">
       <p class="label-caps text-ink-4 mb-6" data-anim="final-cta">Vamos conversar</p>
       <h2 class="cta-title font-display text-inverse max-w-[16ch]" data-anim="final-cta">Seu caso merece ser ouvido com atenção.</h2>
@@ -263,14 +271,14 @@
 <footer class="site-footer">
   <div class="wrap section-pad">
     <img src="assets/images/logo.png" alt="Arilton de Almeida Silva - Advogado (OAB/SP 275.434)" class="footer-emblem" width="118" height="118">
-    <div class="grid gap-12 md:grid-cols-[1.3fr_0.7fr_1fr]">
+    <div class="grid gap-12 md:grid-cols-[1fr_0.7fr_1fr]">
       <div>
         <span class="font-display text-[1.7rem] text-inverse leading-none">Arilton Silva</span>
         <p class="label-caps footer-muted mt-3">Advocacia &middot; OAB/SP 275.434</p>
         <p class="footer-dim text-body-sm mt-5 max-w-[34ch]">Defesa dos seus direitos trabalhistas com ética, atendimento personalizado e técnica rigorosa.</p>
       </div>
 
-      <nav class="footer-nav">
+      <nav class="footer-nav items-center text-center">
         <p class="label-caps footer-muted mb-4">Navegação</p>
         <a href="#sobre" class="footer-link">Sobre</a>
         <a href="#areas" class="footer-link">Áreas de atuação</a>
@@ -278,15 +286,15 @@
         <a href="#faq" class="footer-link">Dúvidas</a>
       </nav>
 
-      <div>
+      <div class="text-right">
         <p class="label-caps footer-muted mb-4">Contato</p>
-        <a href="https://wa.me/5511950172265?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20iniciar%20um%20atendimento%20com%20o%20Dr.%20Arilton%20Silva." target="_blank" rel="noopener" class="footer-contact">
+        <a href="https://wa.me/5511950172265?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20iniciar%20um%20atendimento%20com%20o%20Dr.%20Arilton%20Silva." target="_blank" rel="noopener" class="footer-contact flex-row-reverse">
           <span class="material-symbols-outlined" aria-hidden="true">chat</span> (11) 95017-2265 &middot; WhatsApp
         </a>
-        <a href="mailto:arilton11@yahoo.com.br" class="footer-contact">
+        <a href="mailto:arilton11@yahoo.com.br" class="footer-contact flex-row-reverse">
           <span class="material-symbols-outlined" aria-hidden="true">mail</span> arilton11@yahoo.com.br
         </a>
-        <p class="footer-contact footer-contact--static">
+        <p class="footer-contact footer-contact--static flex-row-reverse">
           <span class="material-symbols-outlined" aria-hidden="true">distance</span> Atendimento 100% online no Brasil
         </p>
       </div>
@@ -304,6 +312,9 @@
 
 <!-- ============ MOBILE SECTION RAIL (wayfinder) ============ -->
 <nav id="sectionRail" class="section-rail md:hidden" aria-label="Seções" aria-hidden="true">
+  <button class="section-rail-toggle" id="sectionRailToggle" aria-label="Recolher navegação">
+    <span class="material-symbols-outlined" aria-hidden="true">keyboard_arrow_left</span>
+  </button>
   <ul class="section-rail-list">
     <li><a href="#top" class="section-rail-link" data-rail-link>Início</a></li>
     <li><a href="#sobre" class="section-rail-link" data-rail-link>Sobre</a></li>
@@ -311,7 +322,7 @@
     <li><a href="#como" class="section-rail-link" data-rail-link>Como funciona</a></li>
     <li><a href="#faq" class="section-rail-link" data-rail-link>Dúvidas</a></li>
   </ul>
-  <span class="section-rail-track" aria-hidden="true">
+  <span class="section-rail-track" id="sectionRailTrack" aria-hidden="true">
     <span class="section-rail-dot" id="sectionRailDot"></span>
   </span>
 </nav>

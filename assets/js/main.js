@@ -106,7 +106,8 @@
   if (sectionRail && railDot && hero) {
     var mqMobile = window.matchMedia('(max-width: 767px)');
     var railLinks = Array.prototype.slice.call(sectionRail.querySelectorAll('[data-rail-link]'));
-    var railTrack = sectionRail.querySelector('.section-rail-track');
+    var railTrack = document.getElementById('sectionRailTrack');
+    var railToggle = document.getElementById('sectionRailToggle');
     var ctaFinal = document.querySelector('.cta-final');
     var railTargets = railLinks.map(function (link) {
       var href = link.getAttribute('href');
@@ -169,6 +170,17 @@
       spyLock = false; clearTimeout(spyTimer);
       railLastY = window.scrollY; railDownAccum = 0; railUpAccum = 0;
       updateRail();
+    }
+    if (railToggle) {
+      railToggle.addEventListener('click', function () {
+        railMin = true; railDownAccum = 0; railUpAccum = 0;
+        sectionRail.classList.add('is-min');
+      });
+    }
+    if (railTrack) {
+      railTrack.addEventListener('click', function () {
+        if (railMin) expandRail();
+      });
     }
     railLinks.forEach(function (link, i) {
       link.addEventListener('click', function () {
