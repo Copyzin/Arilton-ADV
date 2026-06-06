@@ -1,0 +1,30 @@
+# ===========================================================================
+# Arilton Silva Advocacia - repo do site (Almeida Escala Digital)
+# Versionamos apenas o que vai para producao: HTML estatico + assets.
+# Padroes ancorados na raiz (/) para NAO afetar assets/images/logo.png.
+# ===========================================================================
+
+# Dados pessoais do cliente - NUNCA publicar
+/infos.txt
+
+# Documentos internos da agencia / processo (nao publicar)
+/CLAUDE.md
+/landing-patterns.md
+/design.md
+
+# Fontes e artefatos de desenvolvimento (nao usados em producao)
+/logo.png
+/vecteezy_vector-lady-justice_101294.svg
+/comparacao-fontes.html
+/noise effect.md
+
+# Screenshots de teste / temporarios
+shot_*.png
+*.tmp
+
+# Sistema operacional / editores
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+.vscode/
